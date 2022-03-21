@@ -1,28 +1,32 @@
 import React from "react";
-import {Button, Card, CardActions, CardContent, Typography} from "@mui/material";
+import {Card, CardContent, Grid, Typography} from "@mui/material";
+import {EventsModel} from "../../models/events-model";
+import './index.css'
 
-export function EventCard() {
+export function EventCards() {
+    const events = EventsModel
+    const getEventCards = () => {
+        return events.map((event, index) => {
+            return (
+                <Grid className="whole-event">
+                    <Card sx={{minWidth: 275}}>
+                        <CardContent>
+                            <Typography variant="h5" component="div">
+                                {event.date}
+                            </Typography>
+                            <Typography sx={{mb: 1.5}} color="text.secondary">
+                                {event.time}
+                            </Typography>
+                            <Typography variant="body2">
+                                {event.room}
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            )
+        })
+    }
     return (
-        <Card sx={{minWidth: 275}}>
-            <CardContent>
-                <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
-                    Word of the Day
-                </Typography>
-                <Typography variant="h5" component="div">
-                    belent
-                </Typography>
-                <Typography sx={{mb: 1.5}} color="text.secondary">
-                    adjective
-                </Typography>
-                <Typography variant="body2">
-                    well meaning and kindly.
-                    <br/>
-                    {'"a benevolent smile"'}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button size="small">Learn More</Button>
-            </CardActions>
-        </Card>
+        getEventCards()
     )
 }
