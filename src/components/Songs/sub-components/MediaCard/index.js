@@ -33,7 +33,7 @@ export function MediaCard() {
                                 <CardMedia
                                     component="img"
                                     sx={{width: '100%'}}
-                                    image={song.img}
+                                    image={`./images${song.img}`}
                                     alt="Live from space album cover"
                                 />
                             </Grid>
