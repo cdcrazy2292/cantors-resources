@@ -8,7 +8,7 @@ import {BrowserRouter} from "react-router-dom";
 export default function MainContainer() {
     return (
         <React.Fragment>
-            <BrowserRouter>
+            <BrowserRouter basename="/cantors-resources">
             <Container maxWidth="sm">
                 <ContentContainer />
                 <NavBar />
