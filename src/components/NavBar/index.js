@@ -15,18 +15,17 @@ export function NavBar() {
                 value={value}
                 onChange={(event, newValue) => {
                     setValue(newValue);
-                    console.log(newValue)
                 }}
             >
                 <BottomNavigationAction
                     component={Link}
-                    to="/"
+                    to="/cantors-resources/"
                     value="meetings"
                     label="Meetings"
                     icon={<CalendarMonthIcon/>}/>
                 <BottomNavigationAction
                     component={Link}
-                    to="/songs"
+                    to="/cantors-resources/songs"
                     value="songs"
                     label="Songs"
                     icon={<LibraryMusicIcon/>}/>

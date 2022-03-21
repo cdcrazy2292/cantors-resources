@@ -7,11 +7,10 @@ import './index.css'
 export function MediaCard() {
     const songs = SongsModel
     const getSongCards = () => {
-        console.log(songs)
         return songs.map((song, index) => {
             return (
-                <Grid className="whole-card">
-                    <Card sx={{display: 'flex'}} key={`card-${index}`} className="media-card">
+                <Grid className="whole-card" key={`card-${index}`}>
+                    <Card sx={{display: 'flex'}} className="media-card">
                         <Grid container justifyContent="space-between">
                             <Grid item className="song-info">
                                 <CardContent>

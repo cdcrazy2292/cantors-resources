@@ -8,7 +8,7 @@ export function EventCards() {
     const getEventCards = () => {
         return events.map((event, index) => {
             return (
-                <Grid className="whole-event">
+                <Grid className="whole-event" key={`event-${index}`}>
                     <Card sx={{minWidth: 275}}>
                         <CardContent>
                             <Typography variant="h5" component="div">

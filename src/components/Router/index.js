@@ -6,8 +6,8 @@ import {Songs} from "../Songs";
 export function Router() {
     return (
         <Routes>
-            <Route path="/" element={<Calendar />}/>
-            <Route path="/songs" element={<Songs />}/>
+            <Route path="/cantors-resources/" element={<Calendar />}/>
+            <Route path="/cantors-resources/songs" element={<Songs />}/>
         </Routes>
     )
 }
